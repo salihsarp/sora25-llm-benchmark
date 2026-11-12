@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+logs/
+tests/_sim/
+*.jsonl.batches.json
+.venv/
+data/
+results/

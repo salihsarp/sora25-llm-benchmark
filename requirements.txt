@@ -1,0 +1,5 @@
+# Only needed for soraeval/stats_extra.py and the figures; everything else uses the standard library.
+numpy>=1.24
+pandas>=2.0
+statsmodels>=0.14
+matplotlib>=3.7

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "SORA 2.5 LLM benchmark: code and data for 'Do Large Language Models Rate Drone Operations as Safer than They Are? A Deterministic Benchmark of JARUS SORA 2.5 Risk Assessment in English and Turkish'"
+authors:
+  - family-names: Sarp
+    given-names: Salih
+    orcid: "https://orcid.org/0000-0001-6674-2590"
+    affiliation: "Gebze Technical University"
+date-released: 2026-11-12
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/salihsarp/sora25-llm-benchmark"
+keywords:
+  - unmanned aircraft systems
+  - SORA
+  - large language models
+  - risk assessment
+  - benchmark

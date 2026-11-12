@@ -1,0 +1,99 @@
+assessments: 27600 rows; scenarios: 1500; repeatability: 300; extractions: 9200
+
+1. SAIL under-classification (primary) and exact SAIL, Wilson 95% CI
+model                  set-up                lang     n  SAIL too low           SAIL exact             too low/too high
+claude-haiku-4-5       Closed book           en     400   70.5% [65.9, 74.8]     22.8% [18.9, 27.1]    282/27
+claude-haiku-4-5       Closed book           tr     400   76.0% [71.6, 79.9]     18.5% [15.0, 22.6]    304/22
+claude-haiku-4-5       Rule card             en     400   27.2% [23.1, 31.8]     66.8% [62.0, 71.2]    109/24
+claude-haiku-4-5       Rule card             tr     400   20.5% [16.8, 24.7]     65.8% [61.0, 70.2]    82/55
+claude-haiku-4-5       Extract + calculator  en     400    0.2% [0.0, 1.4]       99.5% [98.2, 99.9]    1/0
+claude-haiku-4-5       Extract + calculator  tr     400    0.0% [0.0, 1.0]       99.0% [97.5, 99.6]    0/4
+claude-haiku-5-5       Closed book           en    1500   37.9% [35.5, 40.4]     38.9% [36.5, 41.4]    569/341
+claude-haiku-5-5       Closed book           tr    1500   39.3% [36.9, 41.8]     37.9% [35.5, 40.4]    590/340
+claude-haiku-5-5       Rule card             en    1500    1.9% [1.3, 2.7]       98.1% [97.3, 98.7]    28/0
+claude-haiku-5-5       Rule card             tr    1500    0.9% [0.5, 1.5]       98.9% [98.2, 99.3]    13/4
+claude-haiku-5-5       Extract + calculator  en    1500    0.0% [0.0, 0.3]       99.9% [99.5, 100.0]   0/2
+claude-haiku-5-5       Extract + calculator  tr    1500    0.0% [0.0, 0.3]      100.0% [99.7, 100.0]   0/0
+claude-sonnet-5-5      Closed book           en     500   27.2% [23.5, 31.3]     48.4% [44.0, 52.8]    136/122
+claude-sonnet-5-5      Closed book           tr     500   37.0% [32.9, 41.3]     47.0% [42.7, 51.4]    185/80
+claude-sonnet-5-5      Rule card             en     500    2.6% [1.5, 4.4]       97.4% [95.6, 98.5]    13/0
+claude-sonnet-5-5      Rule card             tr     500    1.4% [0.7, 2.9]       97.6% [95.9, 98.6]    7/5
+claude-sonnet-5-5      Extract + calculator  en     500    0.0% [0.0, 0.8]      100.0% [99.2, 100.0]   0/0
+claude-sonnet-5-5      Extract + calculator  tr     500    0.0% [0.0, 0.8]      100.0% [99.2, 100.0]   0/0
+claude-opus-5-5        Closed book           en     200    3.5% [1.7, 7.0]       68.0% [61.2, 74.1]    7/57
+claude-opus-5-5        Closed book           tr     200    7.0% [4.2, 11.4]      65.0% [58.2, 71.3]    14/56
+claude-opus-5-5        Rule card             en     200    0.0% [0.0, 1.9]      100.0% [98.1, 100.0]   0/0
+claude-opus-5-5        Rule card             tr     200    0.0% [0.0, 1.9]      100.0% [98.1, 100.0]   0/0
+claude-opus-5-5        Extract + calculator  en     200    0.0% [0.0, 1.9]      100.0% [98.1, 100.0]   0/0
+claude-opus-5-5        Extract + calculator  tr     200    0.0% [0.0, 1.9]      100.0% [98.1, 100.0]   0/0
+gpt-oss:20b            Closed book           en     500   71.2% [67.1, 75.0]     15.6% [12.7, 19.0]    356/66
+gpt-oss:20b            Closed book           tr     500   68.2% [64.0, 72.1]     17.4% [14.3, 21.0]    341/72
+gpt-oss:20b            Rule card             en     500   15.8% [12.9, 19.3]     76.2% [72.3, 79.7]    79/40
+gpt-oss:20b            Rule card             tr     500   16.6% [13.6, 20.1]     56.2% [51.8, 60.5]    83/136
+gpt-oss:20b            Extract + calculator  en     500    6.4% [4.6, 8.9]       89.2% [86.2, 91.6]    32/3
+gpt-oss:20b            Extract + calculator  tr     500   10.8% [8.4, 13.8]      82.4% [78.8, 85.5]    54/9
+mistral-small3.2:24b   Closed book           en     500   53.6% [49.2, 57.9]     20.4% [17.1, 24.2]    268/130
+mistral-small3.2:24b   Closed book           tr     500   74.0% [70.0, 77.7]     11.8% [9.3, 14.9]     370/71
+mistral-small3.2:24b   Rule card             en     500   45.8% [41.5, 50.2]     39.8% [35.6, 44.2]    229/72
+mistral-small3.2:24b   Rule card             tr     500   57.6% [53.2, 61.9]     26.2% [22.5, 30.2]    288/81
+mistral-small3.2:24b   Extract + calculator  en     500    0.8% [0.3, 2.0]       98.2% [96.6, 99.1]    4/1
+mistral-small3.2:24b   Extract + calculator  tr     500    2.4% [1.4, 4.1]       95.0% [92.7, 96.6]    12/0
+gemma4:31b             Closed book           en     500   78.6% [74.8, 82.0]     15.4% [12.5, 18.8]    393/30
+gemma4:31b             Closed book           tr     500   85.2% [81.8, 88.0]     11.6% [9.1, 14.7]     426/16
+gemma4:31b             Rule card             en     500    4.2% [2.8, 6.3]       93.6% [91.1, 95.4]    21/11
+gemma4:31b             Rule card             tr     500    5.6% [3.9, 8.0]       94.4% [92.0, 96.1]    28/0
+gemma4:31b             Extract + calculator  en     500    0.6% [0.2, 1.7]       99.4% [98.3, 99.8]    3/0
+gemma4:31b             Extract + calculator  tr     500    0.0% [0.0, 0.8]       99.8% [98.9, 100.0]   0/0
+qwen3.8:27b            Closed book           en     500   79.6% [75.8, 82.9]     14.0% [11.2, 17.3]    398/32
+qwen3.8:27b            Closed book           tr     500   76.4% [72.5, 79.9]     14.4% [11.6, 17.7]    382/46
+qwen3.8:27b            Rule card             en     500    4.2% [2.8, 6.3]       95.4% [93.2, 96.9]    21/2
+qwen3.8:27b            Rule card             tr     500    4.0% [2.6, 6.1]       95.6% [93.4, 97.1]    20/2
+qwen3.8:27b            Extract + calculator  en     500    0.8% [0.3, 2.0]       99.2% [98.0, 99.7]    4/0
+qwen3.8:27b            Extract + calculator  tr     500    5.2% [3.6, 7.5]       94.2% [91.8, 95.9]    26/0
+
+2. Share of assessments with a wrong SAIL by source (% of all assessments; both languages)
+model                  set-up                    ground        air ground+air     lookup   unparsed
+claude-haiku-4-5       Closed book                 28.5       13.0       32.6        5.2        0.0
+claude-haiku-4-5       Rule card                   13.6       12.5        7.0        0.6        0.0
+claude-haiku-4-5       Extract + calculator         0.6        0.0        0.0        0.0        0.1
+claude-haiku-5-5       Closed book                 20.4       13.1       21.0        6.8        0.2
+claude-haiku-5-5       Rule card                    0.8        0.7        0.0        0.0        0.0
+claude-haiku-5-5       Extract + calculator         0.1        0.0        0.0        0.0        0.0
+claude-sonnet-5-5      Closed book                 17.2       11.0       12.1       12.0        0.0
+claude-sonnet-5-5      Rule card                    1.3        1.0        0.0        0.2        0.0
+claude-sonnet-5-5      Extract + calculator         0.0        0.0        0.0        0.0        0.0
+claude-opus-5-5        Closed book                  3.8       24.8        3.2        1.8        0.0
+claude-opus-5-5        Rule card                    0.0        0.0        0.0        0.0        0.0
+claude-opus-5-5        Extract + calculator         0.0        0.0        0.0        0.0        0.0
+gpt-oss:20b            Closed book                 18.9       15.4       45.1        4.1        0.0
+gpt-oss:20b            Rule card                    9.4       15.0        8.3        1.1        0.0
+gpt-oss:20b            Extract + calculator         5.3        3.4        1.1        0.0        4.4
+mistral-small3.2:24b   Closed book                 24.1       15.0       37.1        7.7        0.0
+mistral-small3.2:24b   Rule card                   27.5       13.7       21.0        4.8        0.0
+mistral-small3.2:24b   Extract + calculator         1.7        0.0        0.0        0.0        1.7
+gemma4:31b             Closed book                 25.4       17.3       37.0        6.8        0.0
+gemma4:31b             Rule card                    5.3        0.6        0.1        0.0        0.0
+gemma4:31b             Extract + calculator         0.3        0.0        0.0        0.0        0.1
+qwen3.8:27b            Closed book                 22.7       17.4       40.5        5.2        0.0
+qwen3.8:27b            Rule card                    3.5        0.2        0.1        0.7        0.0
+qwen3.8:27b            Extract + calculator         0.4        2.5        0.1        0.0        0.3
+
+3. Extract + calculator: accuracy of each extracted field (% of returned extractions; both languages)
+model                   returned              mtom               dim             speed              band       mitigations       height_side airspace_relevant        flightmode
+claude-haiku-4-5             800             100.0             100.0             100.0              96.2              99.6             100.0             100.0              99.4
+claude-haiku-5-5            3000             100.0             100.0             100.0             100.0              99.8             100.0              99.7             100.0
+claude-sonnet-5-5           1000             100.0             100.0             100.0             100.0             100.0             100.0             100.0             100.0
+claude-opus-5-5              400             100.0             100.0             100.0             100.0             100.0             100.0             100.0             100.0
+gpt-oss:20b                 1000              99.7             100.0             100.0              97.6              98.2              99.9              93.6              96.3
+mistral-small3.2:24b        1000              99.8             100.0             100.0              96.0              98.7             100.0             100.0              98.3
+gemma4:31b                  1000             100.0             100.0             100.0              98.9             100.0             100.0             100.0             100.0
+qwen3.8:27b                 1000             100.0             100.0             100.0              99.0             100.0              94.6              95.1              99.9
+
+4. Repeatability (Haiku 5.5, closed book, English, 100 scenarios x 3 runs): Fleiss kappa = 0.347; all three SAILs identical for 32/100
+
+5. Claude API cost per correct SAIL (US$, batch prices; both languages)
+claude-haiku-4-5       Closed book 0.0196; Rule card 0.0070; Extract + calculator 0.0015
+claude-haiku-5-5       Closed book 0.0044; Rule card 0.0005; Extract + calculator 0.0002
+claude-sonnet-5-5      Closed book 0.0149; Rule card 0.0046; Extract + calculator 0.0025
+claude-opus-5-5        Closed book 0.0299; Rule card 0.0163; Extract + calculator 0.0062
+total cost of the main Claude runs: US$46.49
